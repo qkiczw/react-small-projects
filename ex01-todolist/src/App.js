@@ -6,17 +6,17 @@ const initialState = [
   {
     id: 1,
     name: 'Read a book',
-    color: 'red'   
+    itemColor: 'red'   
   },
   {
     id: 2,
     name: 'Study ReactJs',
-    color: 'green'   
+    itemColor: 'green'   
   },
   {
     id: 3,
     name: 'Buy someting for dinner',
-    color: 'yellow'   
+    itemColor: 'blue'   
   },
 ];
 
