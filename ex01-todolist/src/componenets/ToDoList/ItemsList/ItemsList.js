@@ -4,7 +4,7 @@ import Item from './Item/Item';
 
 const Items= (props) => (
     <>
-        <ul className={styles.items}>
+        <ul className={styles.wrapper}>
             {props.items.map( item => (
                 <Item
                     key={item.id}

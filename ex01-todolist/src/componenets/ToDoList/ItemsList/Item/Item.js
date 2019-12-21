@@ -3,7 +3,11 @@ import styles from './Item.module.css';
 
 const Item =({name, itemColor}) => (
     <>
-        <li className={styles[itemColor]}>{name}</li>
+        <li className={styles.wrapper}>
+            <div className={styles[itemColor]}>
+                {name}
+            </div>
+        </li>
         
     </>
 )

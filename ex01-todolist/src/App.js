@@ -1,22 +1,22 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import ToDoList from './componenets/ToDoList/ToDoList';
 
 const initialState = [
   {
     id: 1,
     name: 'Read a book',
-    itemColor: 'red'   
+    itemColor: 'important'   
   },
   {
     id: 2,
     name: 'Study ReactJs',
-    itemColor: 'green'   
+    itemColor: 'normal'   
   },
   {
     id: 3,
     name: 'Buy someting for dinner',
-    itemColor: 'blue'   
+    itemColor: 'lowPriority'   
   },
 ];
 
@@ -44,10 +44,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={styles.wrapper}>
         <ToDoList 
           stateItems={this.state.items}
-          addItem={this.addItem}  
+          addItem={this.addItem} 
         />
       </div>
     );

@@ -1,9 +1,22 @@
-.red{
+.important{
     background-color: #E57373;
 }
-.green{
+.normal{
     background-color: #81C784;
 }
-.blue{
+.lowPriority{
     background-color: #64B5F6;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 5px 0;
+    max-width: 100%;
+}
+
+.important, .normal, .lowPriority{
+    padding: 5px 30px;
+    
 }
