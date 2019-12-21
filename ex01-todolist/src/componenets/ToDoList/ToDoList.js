@@ -1,10 +1,14 @@
 import React from 'react'
 
-import Header from './header/Header'
+import Header from './header/Header';
+import Items from './Items/Items';
 
 const ToDoList = () => (
 
-    <Header />
+    <>
+        <Header/>
+        <Items/>
+    </>
 )
 
 export default ToDoList;
