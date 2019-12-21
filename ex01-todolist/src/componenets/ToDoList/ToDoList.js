@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Header from './header/Header';
-import Items from './Items/Items';
+import ItemsList from './ItemsList/ItemsList';
 
-const ToDoList = () => (
-
+const ToDoList = (props) => (
+    
     <>
         <Header/>
-        <Items/>
+        <ItemsList items={props.stateItems}/>
     </>
 )
 

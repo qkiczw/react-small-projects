@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Item.module.css';
 
-const Item =() => (
+const Item =({name}) => (
     <>
-        <li>Item</li>
+        <li>{name}</li>
     </>
 )
 
