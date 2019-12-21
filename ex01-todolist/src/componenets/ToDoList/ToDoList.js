@@ -2,14 +2,14 @@ import React from 'react'
 
 import Header from './header/Header';
 import ItemsList from './ItemsList/ItemsList';
-import AddItemPanel from './AddItemPanel/AddItemPanel'
+import AddItemPanel from './AddItemPanel/AddItemPanel';
 
 const ToDoList = (props) => (
     
     <>
         <Header/>
         <ItemsList items={props.stateItems}/>
-        <AddItemPanel/>
+        <AddItemPanel addItem={props.addItem}/>
     </>
 )
 

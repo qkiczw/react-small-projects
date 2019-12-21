@@ -26,10 +26,29 @@ class App extends React.Component {
     items: [...initialState]
   }
   
+  addItem =(e) => {
+    e.preventDefault();
+    const timeStampId = Date.now()
+    const newItemToAdd = {
+      id: timeStampId,
+      name: e.target.taskName.value,
+      itemColor: e.target.taskPriority.value
+    }
+
+    this.setState( prevState => ({
+      items: [...prevState.items, newItemToAdd]
+    }))
+    console.log('This will Add new Task');
+    console.log(newItemToAdd);
+  }
+
   render() {
     return (
       <div className="App">
-        <ToDoList stateItems={this.state.items}/>
+        <ToDoList 
+          stateItems={this.state.items}
+          addItem={this.addItem}  
+        />
       </div>
     );
 
