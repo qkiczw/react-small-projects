@@ -36,7 +36,7 @@ class App extends React.Component {
     }
 
     this.setState( prevState => ({
-      tasks: [...prevState.items, newItemToAdd]
+      tasks: [...prevState.tasks, newItemToAdd]
     }))
   }
     removeItem = (id) => {
