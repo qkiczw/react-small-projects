@@ -5,9 +5,10 @@ import Item from './Item/Item';
 const Items= (props) => (
     <>
         <ul className={styles.wrapper}>
-            {props.items.map( item => (
+            {props.items.map( (item) => (
                 <Item
                     key={item.id}
+                    removeItem={props.removeItem}
                     {...item}
                 />
             ))}

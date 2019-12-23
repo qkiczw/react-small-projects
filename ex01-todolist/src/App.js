@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './App.module.css';
 import ToDoList from './componenets/ToDoList/ToDoList';
 
-const initialState = [
+const initialTasks = [
   {
     id: 1,
     name: 'Read a book',
@@ -23,10 +23,10 @@ const initialState = [
 class App extends React.Component {
 
   state = {
-    items: [...initialState]
+    tasks: [...initialTasks]
   }
   
-  addItem =(e) => {
+  addItem = (e) => {
     e.preventDefault();
     const timeStampId = Date.now()
     const newItemToAdd = {
@@ -36,18 +36,23 @@ class App extends React.Component {
     }
 
     this.setState( prevState => ({
-      items: [...prevState.items, newItemToAdd]
+      tasks: [...prevState.items, newItemToAdd]
     }))
-    console.log('This will Add new Task');
-    console.log(newItemToAdd);
+  }
+    removeItem = (id) => {
+      const postID = id;
+      this.setState( prevState => ({
+       tasks: [...prevState.tasks.filter( task=> task.id !== postID)]
+      }))
   }
 
   render() {
     return (
       <div className={styles.wrapper}>
         <ToDoList 
-          stateItems={this.state.items}
-          addItem={this.addItem} 
+          stateItems={this.state.tasks}
+          addItem={this.addItem}
+          removeItem={this.removeItem}
         />
       </div>
     );
