@@ -6,17 +6,20 @@ const initialTasks = [
   {
     id: 1,
     name: 'Read a book',
-    itemColor: 'important'   
+    itemColor: 'important',
+    isDone: false,   
   },
   {
     id: 2,
     name: 'Study ReactJs',
-    itemColor: 'normal'   
+    itemColor: 'normal',
+    isDone: false,   
   },
   {
     id: 3,
     name: 'Buy someting for dinner',
-    itemColor: 'lowPriority'   
+    itemColor: 'lowPriority',
+    isDone: true,   
   },
 ];
 
@@ -32,19 +35,31 @@ class App extends React.Component {
     const newItemToAdd = {
       id: timeStampId,
       name: e.target.taskName.value,
-      itemColor: e.target.taskPriority.value
+      itemColor: e.target.taskPriority.value,
+      isDone: false,
     }
 
     this.setState( prevState => ({
       tasks: [...prevState.tasks, newItemToAdd]
     }))
   }
-    removeItem = (id) => {
+  removeItem = (id) => {
       const postID = id;
       this.setState( prevState => ({
        tasks: [...prevState.tasks.filter( task=> task.id !== postID)]
-      }))
+      }));
   }
+  taskIsDone = (id, isDone) => {
+    const taskStateIndex = this.state.tasks.findIndex( stateTask => stateTask.id === id );
+    console.log('this tast is done?', isDone);
+    console.log('nr z tablicy to: ', taskStateIndex)
+    
+    //TODO: zmienna taskStateIndex zwara index tasku w tablicy i teraz jak isDone w tym 
+    //obiekcie zmienić za pomocą setState
+    
+  
+  }
+
 
   render() {
     return (
@@ -53,6 +68,7 @@ class App extends React.Component {
           stateItems={this.state.tasks}
           addItem={this.addItem}
           removeItem={this.removeItem}
+          taskIsDone={this.taskIsDone}
         />
       </div>
     );

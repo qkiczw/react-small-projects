@@ -9,6 +9,7 @@ const Items= (props) => (
                 <Item
                     key={item.id}
                     removeItem={props.removeItem}
+                    taskIsDone={props.taskIsDone}
                     {...item}
                 />
             ))}

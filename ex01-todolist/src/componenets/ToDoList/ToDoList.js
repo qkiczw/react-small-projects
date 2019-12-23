@@ -8,7 +8,11 @@ const ToDoList = (props) => (
     
     <>
         <Header/>
-        <ItemsList items={props.stateItems} removeItem={props.removeItem}/>
+        <ItemsList 
+            items={props.stateItems} 
+            removeItem={props.removeItem}
+            taskIsDone={props.taskIsDone}
+        />
         <AddItemPanel addItem={props.addItem}/>
     </>
 )
