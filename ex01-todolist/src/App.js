@@ -17,7 +17,7 @@ const initialTasks = [
   },
   {
     id: 3,
-    name: 'Buy someting for dinner',
+    name: 'Buy something for dinner',
     itemColor: 'lowPriority',
     isDone: true,   
   },
@@ -53,11 +53,20 @@ class App extends React.Component {
     const taskStateIndex = this.state.tasks.findIndex( stateTask => stateTask.id === id );
     console.log('this tast is done?', isDone);
     console.log('nr z tablicy to: ', taskStateIndex)
+    console.log(this.state.tasks[taskStateIndex].isDone)
     
+    this.setState(prevState => { //nie wiem czy ten sposób jest dobrt :/
+      const newItems = [...prevState.tasks];
+      
+      const xxx = newItems[taskStateIndex].isDone === true ? false : true; 
+      newItems[taskStateIndex].isDone = xxx
+      return {tasks: newItems};
+  })
+
+  console.log(this.state)
     //TODO: zmienna taskStateIndex zwara index tasku w tablicy i teraz jak isDone w tym 
     //obiekcie zmienić za pomocą setState
-    
-  
+
   }
 
 
