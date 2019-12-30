@@ -55,12 +55,11 @@ class App extends React.Component {
     console.log('nr z tablicy to: ', taskStateIndex)
     console.log(this.state.tasks[taskStateIndex].isDone)
     
-    this.setState(prevState => { //nie wiem czy ten sposób jest dobrt :/
-      const newItems = [...prevState.tasks];
-      
-      const xxx = newItems[taskStateIndex].isDone === true ? false : true; 
-      newItems[taskStateIndex].isDone = xxx
-      return {tasks: newItems};
+    this.setState(prevState => { //nie wiem czy ten sposób jest dobry :/
+      const cloneTasksState = [...prevState.tasks];
+      const isTaskDone = cloneTasksState[taskStateIndex].isDone === true ? false : true; 
+      cloneTasksState[taskStateIndex].isDone = isTaskDone;
+      return {tasks: cloneTasksState};
   })
 
   console.log(this.state)
