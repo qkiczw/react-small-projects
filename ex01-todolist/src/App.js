@@ -42,6 +42,10 @@ class App extends React.Component {
     this.setState( prevState => ({
       tasks: [...prevState.tasks, newItemToAdd]
     }))
+
+    const addTaskForm = document.querySelector('#addTaskForm');
+    addTaskForm.reset()
+
   }
   removeItem = (id) => {
       const postID = id;

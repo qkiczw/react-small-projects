@@ -3,8 +3,9 @@ import styles from './AddItemPanel.module.css';
 import addTaskIcon from '../../../assets/delete.png';
 
 const AddItemPanel = (props)=> (
-    <form onSubmit={props.addItem} className={styles.wrapper}>
-        <input id='taskName' name='taskName' placeholder='Enter new Task' className={styles.inputField}/>
+    <form id="addTaskForm" onSubmit={props.addItem} className={styles.wrapper}>
+        <input id='taskName' name='taskName' placeholder='Enter New Task' className={styles.inputField} required/>
+        <label for="taskName" className={styles.labelField}>Enter New Task</label>
         <select id='priority' name='taskPriority' className={styles.inputField}>
             <option value='important'>Important</option>
             <option value='normal'>Normal</option>

@@ -1,19 +1,20 @@
 /* TODO: Ostylować odpowiednio item */
 
 .important{
-    background-color: #E57373;
+    background-color: #DC3545;
 }
 .normal{
-    background-color: #81C784;
+    background-color: #28a745;
 }
 .lowPriority{
-    background-color: #64B5F6;
+    background-color: #FFC107;
 }
 @keyframes appearItem{
     0%{ opacity: 0; top: 10px;}
     100%{ opacity: 1; top: 0;}
 }
 .wrapper{
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
