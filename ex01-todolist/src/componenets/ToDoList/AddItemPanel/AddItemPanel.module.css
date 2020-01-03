@@ -16,7 +16,7 @@
 .labelField{
     position: absolute;
     left: 0;
-    top:0;
+    top:-5px;
     font-size: 12px;
     color: #007BFF;
     transition-duration: .3s;
