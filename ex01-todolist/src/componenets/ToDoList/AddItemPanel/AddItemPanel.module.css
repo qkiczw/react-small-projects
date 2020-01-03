@@ -1,0 +1,25 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputField{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid pink;
+    outline: 0;
+    margin: 10px 10px;
+    font-size: 17px;
+}
+.icon{
+    max-width: 30px ;
+    transition: transform .5s;
+    transform: rotate(45deg);
+}
+.btn{
+    margin: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
