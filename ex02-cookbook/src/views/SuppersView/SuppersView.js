@@ -6,3 +6,5 @@ const SuppersView = () => (
         <h1>This is a SuppersView page</h1>
     </div>
 );
+
+export default SuppersView;
