@@ -1,0 +1,13 @@
+.cookBook{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.navPanel{
+    width: 15%;
+    background-color: lightgreen;
+}
+.recepiesPanel{
+    width: 85%;
+    background-color: lightyellow;
+}

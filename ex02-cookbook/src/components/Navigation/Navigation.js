@@ -2,8 +2,11 @@ import React from 'react';
 import styles from './Navigation.module.css';
 import {NavLink} from 'react-router-dom';
 
+import Logo from '../../assets/logo.png';
+
 const Navigation = () => (
     <>
+        <img src={Logo} alt="Logo" className={styles.logo}/>
         <h3>CookBook Menu</h3>
         <ul>
 			<li><NavLink exact activeClassName={styles.navItemActive} to="/">Home</NavLink></li>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Root.module.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import AppContext from '../../context';
 
 import HomeView from '../HomeView/HomeView';
 import BreakfastsView from '../BreakfastsView/BreakfastsView';
@@ -12,7 +13,7 @@ import Navigation from '../../components/Navigation/Navigation';
 class Root extends React.Component {
 
   state = {
-    test: 'it works! :)'
+    test: 'Context Api works! :)'
   }
 
 
@@ -21,16 +22,26 @@ class Root extends React.Component {
 
     return(
       <BrowserRouter>
-        <>
-          <h1>There will be a CookBook</h1>
-          <Navigation/>
-          <Switch>
-            <Route exact path='/' component={HomeView} />
-            <Route path='/breakfasts' component={BreakfastsView} />
-            <Route path='/dinners' component={DinnersView} />
-            <Route path='/suppers' component={SuppersView} />
-          </Switch>
-        </>
+        <AppContext.Provider value={this.state}>
+          <div className={styles.wrapper}>
+            <div className={styles.header}>
+              <h1>Cookbook - simple reciepies</h1>
+            </div>
+            <div className={styles.cookBook}>
+              <div className={styles.navPanel}>
+                <Navigation/>
+              </div>
+              <div className={styles.recepiesPanel}>
+                <Switch>
+                  <Route exact path='/' component={HomeView} />
+                  <Route path='/breakfasts' component={BreakfastsView} />
+                  <Route path='/dinners' component={DinnersView} />
+                  <Route path='/suppers' component={SuppersView} />
+                </Switch>
+              </div>
+            </div> 
+          </div>
+        </AppContext.Provider>
       </BrowserRouter>
     )
 
