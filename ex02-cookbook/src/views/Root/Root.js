@@ -9,11 +9,15 @@ import DinnersView from '../DinnersView/DinnersView';
 import SuppersView from '../SuppersView/SuppersView';
 import Navigation from '../../components/Navigation/Navigation';
 
+//data
+import data from '../../data/Data';
+
 
 class Root extends React.Component {
 
   state = {
-    test: 'Context Api works! :)'
+    test: 'Context Api works! :)',
+    recepies: data,
   }
 
 
