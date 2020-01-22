@@ -10,16 +10,14 @@ const ListItem = (props) => (
                 <div>
                    <img src={props.data.image} alt="Image" className={styles.image}/>
                </div>
-               <div>
+               <div className={styles.title}>
                     <h3>{props.data.title}</h3>
-                    <div>
-                        <span className={styles.difficultyTitle}>Trudność:</span>
-                        <span>{props.data.difficulty}</span>
-                    </div>
                </div>
-           </div>
-           <div>
-               <div className={styles.description}>
+               <div className={styles.difficultyLevel}>
+                    <span className={styles.difficultyTitle}>Trudność:</span>
+                    <span>{props.data.difficulty}</span>
+                </div>
+                <div className={styles.description}>
                    <p  className={styles.descriptionTitle}>Opis:</p>
                    <p>{props.data.description}</p>
                </div>
@@ -29,6 +27,7 @@ const ListItem = (props) => (
                
                </div>
            </div>
+           
         </li>
        
     </>
