@@ -12,12 +12,22 @@ const ListItem = (props) => (
                </div>
                <div>
                     <h3>{props.data.title}</h3>
-                    <h4>{props.data.difficulty}</h4>
+                    <div>
+                        <span className={styles.difficultyTitle}>Trudność:</span>
+                        <span>{props.data.difficulty}</span>
+                    </div>
                </div>
            </div>
            <div>
-               <p>{props.data.description}</p>
-               <p>{props.data.ingredients}</p>
+               <div className={styles.description}>
+                   <p  className={styles.descriptionTitle}>Opis:</p>
+                   <p>{props.data.description}</p>
+               </div>
+               <div className={styles.ingredients}>
+                   <p className={styles.ingredientsTitle}>Składniki:</p>
+                   <p>{props.data.ingredients}</p>
+               
+               </div>
            </div>
         </li>
        

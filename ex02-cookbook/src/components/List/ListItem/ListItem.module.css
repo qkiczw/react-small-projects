@@ -1,8 +1,16 @@
 .wrapper{
     background-color: rgb(179, 179, 179);
     max-width: 20%;
+    border: 1px solid #373737;
+
 }
 
 .image{
     max-width: 100%;
+}
+.difficultyTitle, difficultyTitle, .ingredientsTitle{
+    font-weight: bold;
+}
+.description, .ingredients{
+    padding: 0 5px;
 }
