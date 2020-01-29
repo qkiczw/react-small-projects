@@ -4,11 +4,21 @@ import styles from './ListItem.module.css';
 import ClockIcon from '../../../assets/clock-icon.png'
 import StarIcon from '../../../assets/star-icon.png'
 
-const easyIcon = <img src={StarIcon} className={styles.clockIcon} alt='clock icon'/>;
-const mediumIcon = 'trochę trudne';
-const hardIcon = 'trudne';
-const checkDifficulty = (level) => level === 'Medium' ? mediumIcon: hardIcon;
+// const levelIcon = <img src={StarIcon} className={styles.starIcon} alt='clock icon'/>;
 
+const checkLevel = (level) => {
+    if (level === 2) {
+        return 'trohę trudne';
+        // zrobić div z klasą icons albo coś takiego i do niego dawać append jakiś kod z img
+    }
+    else if (level === 3) {
+        return 'trudne';
+    }
+    else {
+        return 'łatwe';
+    }
+
+}; 
 
 const ListItem = (props) => (
     
@@ -23,9 +33,8 @@ const ListItem = (props) => (
                 </div>
                 <div className={styles.categoryAndLevel}>
                     <div className={styles.category}>{props.data.category}</div>
-                    <div>
-                        Trudność:
-                        {props.data.difficulty === 'Easy' ? easyIcon : checkDifficulty(props.data.difficulty)}
+                    <div className={styles.icons}>
+                        Trudność: {checkLevel(props.data.difficulty)}
                     </div>
                 </div>
                 <div className={styles.time}>

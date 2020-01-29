@@ -11,10 +11,11 @@ const BreakfastsView = () => (
         
         {(context) => (
             
-            <div>
-                <h1>This is Breakfasts View</h1>
+            <div className={styles.wrapper}>
+                <div className={styles.viewHeader}>
+                    <h1>Lista śniadań</h1>
+                </div>
                 <List />
-                
             </div>
         )}
         
