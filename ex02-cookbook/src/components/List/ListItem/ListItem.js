@@ -3,33 +3,28 @@ import styles from './ListItem.module.css';
 
 
 const ListItem = (props) => (
+    
     <>
-        {console.log('to props', props)}
-        <li key={props.data.id} className={styles.wrapper}>
-           <div>
-                <div>
-                   <img src={props.data.image} alt="Image" className={styles.image}/>
-               </div>
-               <div className={styles.title}>
-                    <h3>{props.data.title}</h3>
-               </div>
-               <div className={styles.difficultyLevel}>
-                    <span className={styles.difficultyTitle}>Trudność:</span>
-                    <span>{props.data.difficulty}</span>
-                </div>
-                <div className={styles.description}>
-                   <p  className={styles.descriptionTitle}>Opis:</p>
-                   <p>{props.data.description}</p>
-               </div>
-               <div className={styles.ingredients}>
-                   <p className={styles.ingredientsTitle}>Składniki:</p>
-                   <p>{props.data.ingredients}</p>
-               
-               </div>
-           </div>
-           
-        </li>
-       
+        <div className={styles.wrapper}>
+            <div>
+                <img src={props.data.image} alt="Recipe pic" className={styles.image}/>
+            </div>
+            <div className={styles.title}>
+                <h2>{props.data.title}</h2>
+            </div>
+            <div className={styles.categoryAndLeve}>
+                <div>{props.data.category}</div>
+                <div>Trudność: </div>
+            </div>
+            <div className={styles.ingredients}>
+                <p className={styles.ingredientsTitle}>Składniki:</p>
+                <p>{props.data.ingredients}</p>
+            </div>
+            <div className={styles.addAndMoreBtns}>
+                <button>Więcej...</button>
+                <button>Dodaj do ulubionych </button>
+            </div>
+        </div>
     </>
 )
 
