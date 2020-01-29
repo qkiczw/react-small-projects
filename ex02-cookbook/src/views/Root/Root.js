@@ -28,9 +28,6 @@ class Root extends React.Component {
       <BrowserRouter>
         <AppContext.Provider value={this.state}>
           <div className={styles.wrapper}>
-            <div className={styles.header}>
-              <h1>Cookbook - simple reciepies</h1>
-            </div>
             <div className={styles.cookBook}>
               <div className={styles.navPanel}>
                 <Navigation/>
