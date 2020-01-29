@@ -1,6 +1,6 @@
 .wrapper{
-    background-color: rgb(204, 203, 203);
-    max-width: 50%;
+    background-color: #ecf0f1;
+    max-width: 33%;
     border: 1px solid #9e9e9e;
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -9,24 +9,56 @@
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12);
+    
+}
+.itemContent{
+    padding: 0 10px;
 }
 
 .image{
     max-width: 100%;
 }
 .title{
-    margin: 10px 0 0;
-    padding: 0 5px;
+    padding: 10px 0 0;
 }
-.difficultyLevel{
-    margin: 5px 0;
-    padding: 0 5px;
+.categoryAndLevel{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
 }
-
-.difficultyTitle, .descriptionTitle, .ingredientsTitle{
+.category{
+    margin-top: 5px;
     font-weight: bold;
-    margin: 5px 0 0;
+    text-transform: uppercase;
 }
-.ingredients, .description{
-    padding: 0 5px;
+.time{
+    display: flex;
+    margin-top: 5px;
+}
+.clockIcon{
+    max-width: 25px;
+    margin-right: 5px;
+}
+.ingredients{
+    margin-top: 5px;
+}
+.ingredientsTitle{
+    font-weight: bold;
+}
+.itemBtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.moreBtn, .addBtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.moreBtn{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #c0392b;
+    padding: 0 10px;
+    margin: 20px 0 5px;
 }

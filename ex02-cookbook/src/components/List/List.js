@@ -11,7 +11,7 @@ const List = () => (
             <div>
                 <ul className={styles.wrapper}>
                     {context.recepies.breakfast.map( item => (
-                        <ListItem data={item} />
+                        <ListItem key={item.id} data={item} />
                     ))}                    
                 </ul>
             </div>
