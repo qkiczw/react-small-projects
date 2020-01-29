@@ -21,7 +21,7 @@ const data = {
             ingredients: ['płatki owsiane 150g', 'banan 1szt.', 'mleko 0,5szklanki', 'jajko 1szt.', 'olej do smażenia 0,5 szklanki', 'Cynamon z Wietnamu Knorr 1łyżeczka', 'rodzynki 2 łyżki'],
             time: 30,
             steps: '',
-            difficulty: 'Easy',
+            difficulty: 'Medium',
             image: 'https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/placki-owsiane.jpg',
         }
     ],
