@@ -28,10 +28,10 @@ class Root extends React.Component {
       <BrowserRouter>
         <AppContext.Provider value={this.state}>
           <div className={styles.wrapper}>
-            <div className={styles.cookBook}>
-              <div className={styles.navPanel}>
+            <div className={styles.navPanel}>
                 <Navigation/>
-              </div>
+            </div>
+            <div className={styles.cookBook}>
               <div className={styles.recepiesPanel}>
                 <Switch>
                   <Route exact path='/' component={HomeView} />

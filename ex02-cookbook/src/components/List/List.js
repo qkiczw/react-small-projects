@@ -5,11 +5,11 @@ import ListItem from './ListItem/ListItem';
 
 const List = (props) => (
     <>
-        <u>
+        <ul className={styles.wrapper}>
             {props.data.map( item => (
             <ListItem key={item.id} itemData={item}/>
             ))}
-        </u>  
+        </ul>  
     </>
 )
 

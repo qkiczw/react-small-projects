@@ -2,16 +2,22 @@
     margin: 0;
     padding: 0;
 }
+.wrapper{
+    display: flex;
+}
 .cookBook{
     display: flex;
     flex-direction: row;
     height: 100vh;
 }
 .navPanel{
+    position: fixed;
     width: 15%;
+    height: 100vh;
     background-color: lightgreen;
 }
 .recepiesPanel{
     width: 85%;
     background-color: lightyellow;
 }
+

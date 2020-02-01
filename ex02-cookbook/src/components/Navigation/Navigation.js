@@ -6,14 +6,17 @@ import Logo from '../../assets/logo.png';
 
 const Navigation = () => (
     <>
-        <img src={Logo} alt="Logo" className={styles.logo}/>
-        <h3>CookBook Menu</h3>
-        <ul>
-			<li><NavLink exact activeClassName={styles.navItemActive} to="/">Home</NavLink></li>
-			<li><NavLink activeClassName={styles.navItemActive} to="/breakfasts">Breakfasts</NavLink></li>
-			<li><NavLink activeClassName={styles.navItemActive} to="/dinners">Dinners</NavLink></li>
-			<li><NavLink activeClassName={styles.navItemActive} to="/suppers">Suppers</NavLink></li>  	   
-        </ul>
+        <aside className={styles.wrapper}>
+            <img src={Logo} alt="Logo" className={styles.logo}/>
+            <h3>Przepisy</h3>
+            <ul>
+                <li><NavLink exact activeClassName={styles.navItemActive} to="/">Start</NavLink></li>
+                <li><NavLink activeClassName={styles.navItemActive} to="/breakfasts">Śniadania</NavLink></li>
+                <li><NavLink activeClassName={styles.navItemActive} to="/dinners">Obiady</NavLink></li>
+                <li><NavLink activeClassName={styles.navItemActive} to="/suppers">Kolacje</NavLink></li>  	   
+                <li><NavLink activeClassName={styles.navItemActive} to="/suppers">Ulubione</NavLink></li>  	   
+            </ul>
+        </aside>
     </>
 );
 
