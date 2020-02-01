@@ -10,7 +10,7 @@ const BreakfastsView = () => (
         {(context) => (
             <div className={styles.wrapper}>
                 <div className={styles.viewHeader}>
-                    <h1>Lista śniadań</h1>
+                    <h1>Przepisy na śniadania</h1>
                 </div>
                 <List data={context.recepies.breakfasts}/>
             </div>
