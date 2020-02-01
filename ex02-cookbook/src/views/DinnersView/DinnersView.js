@@ -1,10 +1,23 @@
 import React from 'react';
 import styles from './DinnersView.module.css';
+import AppContext from '../../context';
+
+import List from '../../components/List/List';
 
 const DinnersView = () => (
-    <div className={styles.wrapper}>
-        <h1>Lista obiadów</h1>
-    </div>
+    <AppContext.Consumer>      
+        {(context) => (
+            <> 
+                <div className={styles.wrapper}>
+                    <div className={styles.viewHeader}>
+                        <h1>Lista śniadań</h1>
+                    </div>
+                    <List data={context.recepies.dinners}/>
+                </div>
+            </>
+        )}
+        
+    </AppContext.Consumer>
 );
 
 export default DinnersView;

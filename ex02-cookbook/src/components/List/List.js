@@ -1,23 +1,16 @@
 import React from 'react';
-import AppContext from '../../context';
 import styles from './List.module.css';
 
-//components
 import ListItem from './ListItem/ListItem';
 
-const List = () => (
-    <AppContext.Consumer>
-        {(context) => (
-            <div>
-                <ul className={styles.wrapper}>
-                    {context.recepies.breakfast.map( item => (
-                        <ListItem key={item.id} data={item} />
-                    ))}                    
-                </ul>
-            </div>
-        )}
-    
-    </AppContext.Consumer>
+const List = (props) => (
+    <>
+        <u>
+            {props.data.map( item => (
+            <ListItem key={item.id} itemData={item}/>
+            ))}
+        </u>  
+    </>
 )
 
 export default List;

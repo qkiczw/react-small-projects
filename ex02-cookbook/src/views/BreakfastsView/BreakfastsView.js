@@ -5,17 +5,14 @@ import AppContext from '../../context';
 // Components
 import List from '../../components/List/List';
 
-
 const BreakfastsView = () => (
-    <AppContext.Consumer>
-        
+    <AppContext.Consumer>      
         {(context) => (
-            
             <div className={styles.wrapper}>
                 <div className={styles.viewHeader}>
                     <h1>Lista śniadań</h1>
                 </div>
-                <List />
+                <List data={context.recepies.breakfasts}/>
             </div>
         )}
         

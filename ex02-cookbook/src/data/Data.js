@@ -1,7 +1,7 @@
 // Data borrowed from http://przepisy.pl
 
 const data = {
-    breakfast : [
+    breakfasts : [
         {
             id: 1,
             category: 'Śniadanie',
@@ -58,7 +58,7 @@ const data = {
             image: 'https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/jaja-faszerowane-szpinakiem-2.jpg'
         }
         ],
-    dinner: [
+    dinners: [
         {
             id: 1,
             category: 'Obiad',
@@ -82,7 +82,7 @@ const data = {
             image: 'https://s3.przepisy.pl/przepisy3ii/img/variants/670x0/tomato-soup_a85673.jpg'
         },
     ],
-    supper: [
+    suppers: [
         {
             id: 1,
             category: 'Kolacja',

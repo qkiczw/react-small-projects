@@ -25,25 +25,25 @@ const ListItem = (props) => (
     <>
         <li className={styles.wrapper}>
             <div className={styles.itemImage}>
-                <img src={props.data.image} alt="Recipe pic" className={styles.image}/>
+                <img src={props.itemData.image} alt="Recipe pic" className={styles.image}/>
             </div>
             <div className={styles.itemContent}>
                 <div className={styles.title}>
-                    <h2>{props.data.title}</h2>
+                    <h2>{props.itemData.title}</h2>
                 </div>
                 <div className={styles.categoryAndLevel}>
-                    <div className={styles.category}>{props.data.category}</div>
+                    <div className={styles.category}>{props.itemData.category}</div>
                     <div className={styles.icons}>
-                        Trudność: {checkLevel(props.data.difficulty)}
+                        Trudność: {checkLevel(props.itemData.difficulty)}
                     </div>
                 </div>
                 <div className={styles.time}>
                     <img src={ClockIcon} className={styles.clockIcon} alt='clock icon'/>
-                    <p>Czas: {props.data.time} min.</p>
+                    <p>Czas: {props.itemData.time} min.</p>
                 </div>
                 <div className={styles.ingredients}>
                     <p className={styles.ingredientsTitle}>Składniki:</p>
-                    <p>{props.data.ingredients.join(', ')}</p>
+                    <p>{props.itemData.ingredients.join(', ')}</p>
                 </div>
             </div>
             <div className={styles.itemBtns}> 
