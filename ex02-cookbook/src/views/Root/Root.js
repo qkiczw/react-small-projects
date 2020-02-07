@@ -31,16 +31,14 @@ class Root extends React.Component {
             <div className={styles.navPanel}>
                 <Navigation/>
             </div>
-            <div className={styles.cookBook}>
-              <div className={styles.recepiesPanel}>
-                <Switch>
-                  <Route exact path='/' component={HomeView} />
-                  <Route path='/breakfasts' component={BreakfastsView} />
-                  <Route path='/dinners' component={DinnersView} />
-                  <Route path='/suppers' component={SuppersView} />
-                </Switch>
-              </div>
-            </div> 
+            <div className={styles.recepiesPanel}>
+              <Switch>
+                <Route exact path='/' component={HomeView} />
+                <Route path='/breakfasts' component={BreakfastsView} />
+                <Route path='/dinners' component={DinnersView} />
+                <Route path='/suppers' component={SuppersView} />
+              </Switch>
+            </div>  
           </div>
         </AppContext.Provider>
       </BrowserRouter>

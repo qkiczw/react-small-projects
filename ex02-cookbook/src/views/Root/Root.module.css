@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+
 *{
     margin: 0;
     padding: 0;
 }
 .wrapper{
     display: flex;
-}
-.cookBook{
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
+    justify-self: flex-start;
+    font-family: 'OpenSans', sans-serif;
+}   
 .navPanel{
     position: fixed;
     width: 15%;
