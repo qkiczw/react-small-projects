@@ -4,6 +4,7 @@ import AppContext from '../../context';
 
 // Components
 import List from '../../components/List/List';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const BreakfastsView = () => (
     <AppContext.Consumer>      
@@ -11,6 +12,9 @@ const BreakfastsView = () => (
             <div className={styles.wrapper}>
                 <div className={styles.viewHeader}>
                     <h1>Przepisy na śniadania</h1>
+                </div>
+                <div>
+                    <SearchBar/>
                 </div>
                 <List data={context.recepies.breakfasts}/>
             </div>
