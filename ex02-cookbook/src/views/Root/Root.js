@@ -16,10 +16,23 @@ import data from '../../data/Data';
 class Root extends React.Component {
 
   state = {
-    test: 'Context Api works! :)',
+    searching: [],
     recepies: data,
   }
+  handleSearch = (e) => {
+    e.preventDefault();
+    
+    let searchedItem = e.target.recipeName.value;
+    console.log('Hello I`m working Here!');
+    console.log(`etarger: ${searchedItem}`);
 
+    this.setState(prevState => ({
+      searching: [...prevState.recepies.breakfasts.filter( item => item.title.includes(searchedItem))]
+      
+    }))
+    console.log('searchingItem: ', this.state.searching)
+    
+  }
 
   
   render(){
@@ -34,7 +47,8 @@ class Root extends React.Component {
             <div className={styles.recepiesPanel}>
               <Switch>
                 <Route exact path='/' component={HomeView} />
-                <Route path='/breakfasts' component={BreakfastsView} />
+                {/* Może napisać komponent search bar jako klasowy z własnym stanem i tyle */}
+                <Route path='/breakfasts' render={ () => <BreakfastsView testFn={this.handleSearch} testTXT={'Testowy Tekst'}/>}/>
                 <Route path='/dinners' component={DinnersView} />
                 <Route path='/suppers' component={SuppersView} />
               </Switch>

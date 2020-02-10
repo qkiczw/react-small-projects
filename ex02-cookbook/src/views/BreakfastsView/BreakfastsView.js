@@ -6,15 +6,17 @@ import AppContext from '../../context';
 import List from '../../components/List/List';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-const BreakfastsView = () => (
-    <AppContext.Consumer>      
+const BreakfastsView = ({...props}) => (
+    <AppContext.Consumer>  
+    
         {(context) => (
+            
             <div className={styles.wrapper}>
                 <div className={styles.viewHeader}>
                     <h1>Przepisy na śniadania</h1>
                 </div>
                 <div>
-                    <SearchBar/>
+                    <SearchBar searchFn={props.testFn}/>
                 </div>
                 <List data={context.recepies.breakfasts}/>
             </div>
