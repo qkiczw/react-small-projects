@@ -16,7 +16,7 @@ const BreakfastsView = ({...props}) => (
                     <h1>Przepisy na śniadania</h1>
                 </div>
                 <div>
-                    <SearchBar searchFn={props.testFn}/>
+                    <SearchBar handleSearch={props.handleSearch} searchIn={'breakfasts'}/>
                 </div>
                 <List data={context.recepies.breakfasts}/>
             </div>

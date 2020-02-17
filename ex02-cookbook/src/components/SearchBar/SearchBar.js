@@ -2,14 +2,14 @@ import React from 'react';
 import styles from './SearchBar.module.css';
 import AppContext from '../../context';
 
-const SearchBar = ({searchFn}) => (
+const SearchBar = ({handleSearch, searchIn}) => (
     <AppContext.Consumer>
         {(context) => (
             <>
                 <div className={styles.wrapper}>
-                    <form onSubmit={searchFn}>
+                    <form onSubmit={e => handleSearch(e, searchIn)}>
                         <input id='recipekName' name='recipeName' placeholder='Wpisz szukane danie' className={styles.inputField} required/>
-                        <button type={onsubmit}>Szukaj</button>
+                        <button type='onSubmit' >Szukaj</button>
                     </form>
                 </div>
             </>

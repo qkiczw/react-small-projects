@@ -19,21 +19,23 @@ class Root extends React.Component {
     searching: [],
     recepies: data,
   }
-  handleSearch = (e) => {
+  handleSearch = (e, searchIn) => {
     e.preventDefault();
     
     let searchedItem = e.target.recipeName.value;
+    let searchedCat = searchIn;
     console.log('Hello I`m working Here!');
-    console.log(`etarger: ${searchedItem}`);
+    console.log(`co to: ${searchedItem}`);
+    console.log(`searchedCategory: ${''}`)
+  
 
     this.setState(prevState => ({
-      searching: [...prevState.recepies.breakfasts.filter( item => item.title.includes(searchedItem))]
+      
+      searching: [...prevState.recepies[searchedCat].filter( item => item.title.includes(searchedItem))]
       
     }))
     console.log('searchingItem: ', this.state.searching)
-    
   }
-
   
   render(){
 
@@ -48,8 +50,8 @@ class Root extends React.Component {
               <Switch>
                 <Route exact path='/' component={HomeView} />
                 {/* Może napisać komponent search bar jako klasowy z własnym stanem i tyle */}
-                <Route path='/breakfasts' render={ () => <BreakfastsView testFn={this.handleSearch} testTXT={'Testowy Tekst'}/>}/>
-                <Route path='/dinners' component={DinnersView} />
+                <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch}/>}/>
+                <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch}/>} />
                 <Route path='/suppers' component={SuppersView} />
               </Switch>
             </div>  

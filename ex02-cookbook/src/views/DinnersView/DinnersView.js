@@ -3,8 +3,9 @@ import styles from './DinnersView.module.css';
 import AppContext from '../../context';
 
 import List from '../../components/List/List';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
-const DinnersView = () => (
+const DinnersView = ({...props}) => (
     <AppContext.Consumer>      
         {(context) => (
             <> 
@@ -12,6 +13,9 @@ const DinnersView = () => (
                     <div className={styles.viewHeader}>
                         <h1>Przepisy na obiady</h1>
                     </div>
+                    <div>
+                    <SearchBar handleSearch={props.handleSearch} searchIn={'dinners'}/>
+                </div>
                     <List data={context.recepies.dinners}/>
                 </div>
             </>
