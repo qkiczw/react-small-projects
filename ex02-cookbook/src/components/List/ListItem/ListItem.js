@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './ListItem.module.css';
 
 import ClockIcon from '../../../assets/clock-icon.png'
-import StarIcon from '../../../assets/star-icon.png'
 
 // const levelIcon = <img src={StarIcon} className={styles.starIcon} alt='clock icon'/>;
 

@@ -22,6 +22,9 @@
 .title{
     padding: 10px 0 0;
 }
+.title::first-letter {
+    text-transform: uppercase;
+  }
 .categoryAndLevel{
     margin-top: 5px;
     display: flex;
