@@ -24,17 +24,13 @@ class Root extends React.Component {
     
     let searchedItem = e.target.recipeName.value;
     let searchedCat = searchIn;
-    console.log('Hello I`m working Here!');
-    console.log(`co to: ${searchedItem}`);
-    console.log(`searchedCategory: ${''}`)
-  
 
     this.setState(prevState => ({
       
       searching: [...prevState.recepies[searchedCat].filter( item => item.title.includes(searchedItem))]
       
     }))
-    console.log('searchingItem: ', this.state.searching)
+    console.warn(this.state.searching)
   }
   
   render(){
@@ -52,7 +48,7 @@ class Root extends React.Component {
                 {/* Może napisać komponent search bar jako klasowy z własnym stanem i tyle */}
                 <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch}/>}/>
                 <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch}/>} />
-                <Route path='/suppers' component={SuppersView} />
+                <Route path='/suppers' render={() => <SuppersView handleSearch={this.handleSearch}/>} />
               </Switch>
             </div>  
           </div>

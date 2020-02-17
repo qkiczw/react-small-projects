@@ -14,8 +14,8 @@ const DinnersView = ({...props}) => (
                         <h1>Przepisy na obiady</h1>
                     </div>
                     <div>
-                    <SearchBar handleSearch={props.handleSearch} searchIn={'dinners'}/>
-                </div>
+                        <SearchBar handleSearch={props.handleSearch} searchIn={'dinners'}/>
+                    </div>
                     <List data={context.recepies.dinners}/>
                 </div>
             </>
