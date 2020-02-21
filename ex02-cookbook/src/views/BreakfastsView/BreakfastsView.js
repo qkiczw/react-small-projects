@@ -8,10 +8,10 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 const BreakfastsView = ({...props}) => (
     <AppContext.Consumer>  
-    
         {(context) => (
-            
             <div className={styles.wrapper}>
+                {console.log('coś tu się dodało: ',context.searching[0])}
+                
                 <div className={styles.viewHeader}>
                     <h1>Przepisy na śniadania</h1>
                 </div>

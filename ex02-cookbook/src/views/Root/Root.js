@@ -8,6 +8,7 @@ import BreakfastsView from '../BreakfastsView/BreakfastsView';
 import DinnersView from '../DinnersView/DinnersView';
 import SuppersView from '../SuppersView/SuppersView';
 import Navigation from '../../components/Navigation/Navigation';
+import SearcheResultsView from '../SearchResultsView/SearchResultsView';
 
 //data
 import data from '../../data/Data';
@@ -22,7 +23,7 @@ class Root extends React.Component {
   handleSearch = (e, searchIn) => {
     e.preventDefault();
     
-    let searchedItem = e.target.recipeName.value;
+    let searchedItem = e.target.recipeName.value.toLowerCase();
     let searchedCat = searchIn;
 
     this.setState(prevState => ({
@@ -30,7 +31,6 @@ class Root extends React.Component {
       searching: [...prevState.recepies[searchedCat].filter( item => item.title.includes(searchedItem))]
       
     }))
-    console.warn(this.state.searching)
   }
   
   render(){
@@ -49,6 +49,7 @@ class Root extends React.Component {
                 <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch}/>}/>
                 <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch}/>} />
                 <Route path='/suppers' render={() => <SuppersView handleSearch={this.handleSearch}/>} />
+                <Route path='/searched' render={() => <SearcheResultsView/>} />
               </Switch>
             </div>  
           </div>
