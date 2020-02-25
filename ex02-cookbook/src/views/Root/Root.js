@@ -45,7 +45,6 @@ class Root extends React.Component {
             <div className={styles.recepiesPanel}>
               <Switch>
                 <Route exact path='/' component={HomeView} />
-                {/* Może napisać komponent search bar jako klasowy z własnym stanem i tyle */}
                 <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch}/>}/>
                 <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch}/>} />
                 <Route path='/suppers' render={() => <SuppersView handleSearch={this.handleSearch}/>} />
