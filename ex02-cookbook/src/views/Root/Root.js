@@ -20,6 +20,7 @@ class Root extends React.Component {
     searching: [],
     recepies: data,
   }
+
   handleSearch = (e, searchIn) => {
     e.preventDefault();
     
@@ -32,6 +33,7 @@ class Root extends React.Component {
       
     }))
   }
+
   
   render(){
 
@@ -45,8 +47,8 @@ class Root extends React.Component {
             <div className={styles.recepiesPanel}>
               <Switch>
                 <Route exact path='/' component={HomeView} />
-                <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch}/>}/>
-                <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch}/>} />
+                <Route path='/breakfasts' render={ () => <BreakfastsView handleSearch={this.handleSearch} viewsearch={this.viewSearchedHandler}/>}/>
+                <Route path='/dinners' render={() => <DinnersView handleSearch={this.handleSearch} viewsearch={this.viewSearchedHandler}/>} />
                 <Route path='/suppers' render={() => <SuppersView handleSearch={this.handleSearch}/>} />
                 <Route path='/searched' render={() => <SearcheResultsView/>} />
               </Switch>

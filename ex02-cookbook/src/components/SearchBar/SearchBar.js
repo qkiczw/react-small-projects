@@ -9,7 +9,7 @@ const SearchBar = ({handleSearch, searchIn}) => (
                 <div className={styles.wrapper}>
                     <form onSubmit={e => handleSearch(e, searchIn)}>
                         <input id='recipekName' name='recipeName' placeholder='Wpisz szukane danie' className={styles.inputField} required/>
-                        <button type='onSubmit' >Szukaj</button>
+                        <button type='onSubmit'>Szukaj</button>
                     </form>
                 </div>
             </>

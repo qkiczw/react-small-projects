@@ -14,7 +14,7 @@ const Navigation = () => (
                 <li><NavLink activeClassName={styles.navItemActive} to="/breakfasts">Śniadania</NavLink></li>
                 <li><NavLink activeClassName={styles.navItemActive} to="/dinners">Obiady</NavLink></li>
                 <li><NavLink activeClassName={styles.navItemActive} to="/suppers">Kolacje</NavLink></li>  	   
-                <li><NavLink activeClassName={styles.navItemActive} to="/suppers">Ulubione</NavLink></li>  	   
+                <li><NavLink activeClassName={styles.navItemActive} to="/searched">Szukane</NavLink></li>  	   
             </ul>
         </aside>
     </>
